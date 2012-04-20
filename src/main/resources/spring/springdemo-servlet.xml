@@ -14,22 +14,6 @@
 
     <context:component-scan base-package="com.saishankarc.springdemo.controller" />
 
-    <bean id="jsonHttpMessageConverter"
-        class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
-
-    <!-- Bind the return value of the Rest service to the ResponseBody. -->
-
-    <bean
-        class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-        <property name="messageConverters">
-            <util:list id="beanList">
-                <ref bean="jsonHttpMessageConverter" />
-            </util:list>
-        </property>
-    </bean>
-
-    <mvc:annotation-driven />
-    
     <!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>

@@ -17,9 +17,9 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>springdemo</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-   
+    
     <context-param>
         <param-name>log4jConfigLocation</param-name>
         <param-value>classpath:/logging/log4j.xml</param-value>
